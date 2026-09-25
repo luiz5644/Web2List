@@ -146,22 +146,26 @@
 }
 
 .btn {
-  padding: 6px 14px;
+  padding: 8px 16px;
   border-radius: 6px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: background-color 0.2s, opacity 0.2s;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.98);
 }
 
 .btn-concluir {
-  background-color: #2563eb;
+  background-color: #16a34a;
   color: #ffffff;
 }
 
 .btn-concluir:hover {
-  background-color: #1d4ed8;
+  background-color: #15803d;
 }
 
 .btn-pendente {
@@ -174,11 +178,31 @@
 }
 
 .btn-excluir {
-  background-color: #ef4444;
+  background-color: #dc2626;
   color: #ffffff;
 }
 
 .btn-excluir:hover {
-  background-color: #dc2626;
+  background-color: #b91c1c;
+}
+
+/* Adaptação para telas menores */
+@media (max-width: 600px) {
+  .task-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .task-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .task-actions .btn {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
 }
 
